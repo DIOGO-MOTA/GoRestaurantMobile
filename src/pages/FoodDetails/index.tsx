@@ -55,6 +55,7 @@ interface Food {
   name: string;
   description: string;
   price: number;
+  thumbnail_url: string;
   image_url: string;
   formattedPrice: string;
   extras: Extra[];
@@ -152,7 +153,7 @@ const FoodDetails: React.FC = () => {
           name: food.name,
           description: food.description,
           price: food.price,
-          image_url: food.image_url,
+          thumbnail_url: food.thumbnail_url,
         })
         .then(() => setIsFavorite(true));
     }
