@@ -178,6 +178,7 @@ const FoodDetails: React.FC = () => {
       category: 1,
       thumbnail_url: food.thumbnail_url,
       extras,
+      foodQuantity,
     });
 
     navigation.navigate('Orders');
@@ -221,7 +222,7 @@ const FoodDetails: React.FC = () => {
             <FoodContent>
               <FoodTitle>{food.name}</FoodTitle>
               <FoodDescription>{food.description}</FoodDescription>
-              <FoodPricing>{food.price}</FoodPricing>
+              <FoodPricing>{formatValue(food.price)}</FoodPricing>
             </FoodContent>
           </Food>
         </FoodsContainer>
@@ -278,7 +279,7 @@ const FoodDetails: React.FC = () => {
           </PriceButtonContainer>
 
           <FinishOrderButton onPress={() => handleFinishOrder()}>
-            <ButtonText>Confirmar pedido</ButtonText>
+            <ButtonText>Adicionar ao pedido</ButtonText>
             <IconContainer>
               <Icon name="check-square" size={24} color="#fff" />
             </IconContainer>

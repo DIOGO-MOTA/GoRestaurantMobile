@@ -8,6 +8,7 @@ interface Product {
   price: number;
   formattedValue: number;
   thumbnail_url: string;
+  foodQuantity: number;
 }
 
 export const Container = styled.View`
@@ -52,14 +53,14 @@ export const Food = styled.TouchableOpacity`
   background: #f0f0f5;
   border-radius: 8px;
 
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 `;
 
 export const FoodImageContainer = styled.View`
   background: #ffb84d;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  padding: 16px;
+  padding: 12px;
 
   height: 100%;
 `;
@@ -70,6 +71,15 @@ export const FoodContent = styled.View`
   padding: 16px;
 `;
 export const FoodTitle = styled.Text`
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #3d3d4d;
+`;
+export const FoodQuantity = styled.Text`
   font-family: 'Poppins-Regular';
   font-style: normal;
   font-weight: 600;
@@ -102,4 +112,52 @@ export const FoodPricing = styled.Text`
   font-weight: 600;
 
   color: #39b100;
+`;
+export const RemoveButton = styled.TouchableOpacity`
+  background: rgba(232, 63, 91, 0.1);
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 5px;
+`;
+
+export const Footer = styled.View`
+  padding: 0 16px;
+`;
+export const FinishOrderButton = styled.TouchableOpacity`
+  background: #c72828;
+  border-radius: 8px;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 26px;
+  margin-bottom: 18px;
+`;
+
+export const ButtonText = styled.Text`
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+  flex: 1;
+  text-align: center;
+`;
+
+export const IconContainer = styled.View`
+  background-color: #c72828;
+  padding: 16px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+`;
+
+export const TotalPrice = styled.Text`
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  margin-top: 8px;
+
+  font-weight: 600;
+
+  color: #fff;
 `;
